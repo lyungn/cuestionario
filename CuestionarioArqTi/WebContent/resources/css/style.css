@@ -1,0 +1,84 @@
+/* tables */
+table.tablesorter {
+	font-family:arial;
+	background-color: #CDCDCD;
+	margin:0px 10pt 15px;
+	font-size: 8pt;
+	width: 98%;
+	text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+	background-color: #e6EEEE;
+	border: 1px solid #FFF;
+	font-size: 8pt;
+	padding: 4px;
+}
+table.tablesorter thead tr .header {
+	background-image: url(/TraceWeb/img/bg.gif);
+	background-repeat: no-repeat;
+	background-position: center right;
+	cursor: pointer;
+}
+table.tablesorter tbody td {
+	color: #3D3D3D;
+	padding: 4px;
+	background-color: #FFF;
+	vertical-align: top;
+}
+table.tablesorter tbody tr.odd td {
+	background-color:#F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+	background-image: url(/TraceWeb/img/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+	background-image: url(/TraceWeb/img/desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+background-color: #8dbdd8;
+}
+#ts_tabmenu {
+font-size: .75em; /* set the font size */
+padding: 0px 0px 0px 15px; /* set the padding */
+}
+#ts_tabmenu ul {
+line-height: 1em; /* setting the line height now so we don't have any headaches*/
+margin: 0px; /* let's keep the margin set to 0 for the same reasons as above*/
+list-style-type: none; /* we remove the UL's default disc bullets */
+float: left; /* we float the list to the left like we will all the elements inside*/
+padding: 0px 0px 0px 5px; /* give it a left padding of 5px to counter the effect of margin -5px below */
+}
+#ts_tabmenu ul li {
+float: left; /* floatin' left */
+}
+#ts_tabmenu ul li a {
+text-decoration: none; /* remove the default underline off the anchor text */
+display: block; /* we display this text as block so that we can apply padding/margin without problems */
+float: left; /* floatin' left, to make the menu horizontal */
+padding: 0px 0px 0px 10px; /* we give it a left padding of 10px to show the first 10 pixels of the tabs image. you can also use padding-left: 10px; */
+background: url(/TraceWeb/img/tabs.gif) no-repeat left top; /* we link to the tabs image, no tiling, showing the top left part of it */
+margin-left: -5px; /* this is important for the overlapping part - we are overlapping the tabs by 5 px */
+z-index: 0; /* keep it on layer 0 (default) */
+position: relative; /* very important as this enables the z-index to work for us and keeps the tabs where they should be */
+color: #666666; /* color of the tab text */
+}
+#ts_tabmenu ul li a strong {
+font-weight: normal; /* remove the bold effect */
+display: block; /* display the strong element as a block so we can pad it, etc. */
+float: left; /* float it left as well */
+background: url(/TraceWeb/img/tabs.gif) no-repeat right top; /* now we show the right part of the tab and we complete the "puzzle" */
+padding: 6px 10px 7px 5px; /* important, as through this you define the position of the text within the tab */
+cursor: pointer; /* this makes the browser show the "hand" cursor when hovering over the tab */
+}
+#ts_tabmenu ul li a:hover {
+position: relative; /* again, keep things relative */
+z-index: 5; /* we show this tab over all other tabs in the menu, which would be on layer 0, thus overlapping occurs */
+background: url(/TraceWeb/img/tabs.gif) no-repeat left bottom; /* now we show the bottom part of the tabs image, the "hover" instance */
+color: #000000; /* we color the hovered tab's text black */
+}
+#ts_tabmenu ul li a:hover strong {
+background-image: url(/TraceWeb/img/tabs.gif) no-repeat;
+position: relative; /* keep it relative */
+z-index: 5; /* show this on layer 5 as well */
+background-position: right bottom; /* we show the right bottom part of the tabs image (the hover instance) */
+}

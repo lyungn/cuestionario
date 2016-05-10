@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<script name="jquery/jquery.js" library="primefaces"></script>
+	<script>
+		function onTabChange() {
+			alert('Tab Is Changed');
+		}
+
+		function onTabShow() {
+			alert('Tab Is Shown');
+		}
+
+		function onTabClose() {
+			alert("Tab Is Closed");
+		}
+	</script>
+</h:head>
+<h:body>
+	<!-- <h:outputStylesheet library="css" name="css/style.css"/>-->
+	<h:form id="form" style="width:80%;higt:80%">
+		<p:dataTable id="cuestionarioTabla" var="item"
+			value="#{cuestionarioManager.getCuestionario()}" editable="true"
+			editMode="cell" widgetVar="cuestionario">
+			<f:facet name="header">Nombre Proyecto</f:facet>
+
+			
+
+			<p:column headerText="Descripcion">
+				<p:cellEditor>
+					<f:facet name="output">
+						<h:outputText value="#{cuestionario.descripcion}" />
+					</f:facet>
+					<f:facet name="input">
+						<p:inputText value="#{cuestionario.descripcion}" style="width:96%"
+							label="Descripcion" />
+					</f:facet>
+				</p:cellEditor>
+			</p:column>
+
+			<p:column headerText="Titulo">
+				<p:cellEditor>
+					<f:facet name="output">
+						<h:outputText value="#{cuestionario.titulo}" />
+					</f:facet>
+
+				</p:cellEditor>
+			</p:column>
+
+			<p:column headerText="Necesidad">
+				<p:cellEditor>
+					<f:facet name="output">
+						<h:outputText value="#{cuestionario.tipo}" />
+					</f:facet>
+
+				</p:cellEditor>
+			</p:column>
+		</p:dataTable>
+
+	</h:form>
+</h:body>
+</html>

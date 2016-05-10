@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<script name="jquery/jquery.js" library="primefaces"></script>
+</h:head>
+<h:body>
+	<table style="width: 100%;padding-left: 10%">
+		<tr style="high: 20%">
+		<p:graphicImage name="image/logo_banco_patagonia.gif"/>
+
+		</tr>
+		<tr style="high: 80%">
+			<h:form id="form" style="width:80%;higt:80%">
+				<p:outputLabel value="#{tabViewManagedBean.messageNum1}"></p:outputLabel>
+				<p:contentFlow value="#{imagesViews.images}" var="image" style="border:0px;">
+					<p:graphicImage name="image/proyects/#{image.imageName}" styleClass="content" />
+					<h:outputText value="#{image.proyectName}" />
+				</p:contentFlow>
+			</h:form>
+		</tr>
+
+	</table>
+</h:body>
+</html>

@@ -1,0 +1,16 @@
+#encabezado{background-image:url(/TraceWeb/img/blueswirly.jpg);background-repeat:repeat;background-color:#fff;color:#333;font-size:small;margin:0;padding:0;}
+#body,div,h1{background-color:#fff font-family:'trebuchet ms', verdana, arial, terminator;margin:0;padding:0;background-position:/TraceWeb/img/fondo.jpg}
+#body{background-color:#fff;color:#333;font-size:small;margin:0;padding:0;}
+#h1{font-size:large;font-weight:400;margin:0;}
+#h2{color:#333;font-size:small;font-weight:400;margin:0;}
+#hr{height:1px;}
+#ul{color:#333;list-style:square;}
+#banner{margin:15px;margin-top:15px;margin-bottom:0px;padding-bottom:0px;text-align:left;background-image:/TraceWeb/img/fondo.jpg;}
+#banner *{color:#232121;font-family:Georgia, Palatino, Times New Roman;font-size:30px;font-style:normal;font-weight:400;margin:0;padding:0;}
+#banner h1{block;float:left;}
+#banner h1 em{color:#00BFFF;}
+#banner h2{float:right;font-size:20px;font-style:italic;margin:10px 10px -10px -10px;}
+#banner h3{clear:both;display:block;font-size:12px;margin-top:-20px;}
+#banner a{border-top:1px solid #888;display:block;font-size:14px;margin:5px 0 0;padding:0px 0 0;text-align:right;width:auto;}
+form{padding:15px;font-size:10pt;margin-bottom:0px;margin-top:0px;width:auto;}
+/* iframe{padding:5px;font-size:10pt;margin-bottom:0px;margin-top:0px;} */
