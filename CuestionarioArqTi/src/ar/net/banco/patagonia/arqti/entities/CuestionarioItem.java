@@ -29,7 +29,7 @@ public class CuestionarioItem {
 	private String titulo;
 
 	@Column(name = "Aclaracion")
-	private String Aclaracion;
+	private String aclaracion;
 
 	@Column(name = "Necesidad")
 	private String necesidad;
@@ -79,11 +79,11 @@ public class CuestionarioItem {
 	}
 
 	public String getAclaracion() {
-		return Aclaracion;
+		return aclaracion;
 	}
 
 	public void setAclaracion(String aclaracion) {
-		Aclaracion = aclaracion;
+		this.aclaracion = aclaracion;
 	}
 
 	public String getNecesidad() {

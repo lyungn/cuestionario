@@ -7,27 +7,41 @@ import java.util.List;
 import javax.annotation.PostConstruct;
 import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
 import javax.faces.bean.ViewScoped;
-import javax.faces.context.FacesContext;
 
-import org.primefaces.event.CellEditEvent;
-
-import ar.net.banco.patagonia.arqti.dao.CuestionarioDao;
 import ar.net.banco.patagonia.arqti.entities.CuestionarioItem;
-
+import ar.net.banco.patagonia.arqti.service.CuestionarioService;
 
 
 @ManagedBean(name="cuestionarioManager")
-@SessionScoped
+@ViewScoped
 public class CuestionarioManager implements Serializable{
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	private List<CuestionarioItem> cuestionario = new ArrayList<CuestionarioItem>();
-
 	
+	
+	private List<CuestionarioItem> cuestionario;
+
+    @ManagedProperty("#{cuestionarioService}")
+    private CuestionarioService service;
+	
+    
+    @PostConstruct
+    public void init() {
+    	
+    	cuestionario = service.getCuestionario(1);
+    }
+    
+    
+    public List<CuestionarioItem> getCuestionario() {
+        return cuestionario;
+    }
+ 
+    public void setService(CuestionarioService service) {
+        this.service = service;
+    }
+    /*
+    
 	public List<CuestionarioItem> getCuestionario() {
 		CuestionarioDao cuestionarioDao = new CuestionarioDao();
 		cuestionario = cuestionarioDao.leerCuestionario(1);
@@ -42,5 +56,5 @@ public class CuestionarioManager implements Serializable{
             FacesMessage msg = new FacesMessage(FacesMessage.SEVERITY_INFO, "Cell Changed", "Old: " + oldValue + ", New:" + newValue);
             FacesContext.getCurrentInstance().addMessage(null, msg);
         }
-    }
+    }*/
 }
